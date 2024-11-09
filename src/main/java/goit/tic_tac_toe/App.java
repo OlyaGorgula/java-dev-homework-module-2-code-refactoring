@@ -9,7 +9,7 @@ public class App {
 
         Field field = new Field(3);
         Player player1 = new Player(field,"X");
-        Player player2 = new Player(field,"O");
+        Player player2 = new Player(field,"0");
 
         System.out.println("Enter box number to select. Enjoy!\n");
 

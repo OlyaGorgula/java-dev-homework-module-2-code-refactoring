@@ -84,9 +84,7 @@ public class Field {
 
     private void isFullField(){
         for(int i=0; i<sizeField; i++){
-            if(boxes[i].equals(" ")){
-                return;
-            }
+            if(boxes[i].equals(" ")) return;
         }
         isFullField = true;
     }

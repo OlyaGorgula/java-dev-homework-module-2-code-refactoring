@@ -30,7 +30,7 @@ public class Player {
             } else
                 System.out.println("Invalid input. Enter again.");
         }
-        didPlayerWin();
+        isPlayerWin();
     }
 
     public void goComputer(){
@@ -41,10 +41,10 @@ public class Player {
                 break;
             }
         }
-        didPlayerWin();
+        isPlayerWin();
     }
 
-    private void didPlayerWin(){
+    private void isPlayerWin(){
         if (isFullByRow()) return;
         if (isFullByColumn()) return;
 
