@@ -3,13 +3,17 @@ package goit.tic_tac_toe;
 import java.util.Scanner;
 
 public class Player {
-    Field field;
-    String signPlayer;
-    boolean isWinner = false;
+    private final Field field;
+    private final String signPlayer;
+    private boolean isWinner = false;
 
     public Player(Field field, String signPlayer) {
         this.field = field;
         this.signPlayer = signPlayer;
+    }
+
+    public boolean isWinner(){
+        return isWinner;
     }
 
     public void goPlayer(Scanner scan){
@@ -26,7 +30,7 @@ public class Player {
             } else
                 System.out.println("Invalid input. Enter again.");
         }
-        isWinner();
+        didPlayerWin();
     }
 
     public void goComputer(){
@@ -37,10 +41,10 @@ public class Player {
                 break;
             }
         }
-        isWinner();
+        didPlayerWin();
     }
 
-    private void isWinner(){
+    private void didPlayerWin(){
         if (isFullByRow()) return;
         if (isFullByColumn()) return;
 

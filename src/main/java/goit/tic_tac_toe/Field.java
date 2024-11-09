@@ -69,10 +69,10 @@ public class Field {
     }
 
     public boolean isGameOver(Player player1, Player player2){
-        if(player1.isWinner){
+        if(player1.isWinner()){
             System.out.println("You won the game!\nCreated by Shreya's Sahi. Thanks for playing!");
             return true;
-        } else if(player2.isWinner){
+        } else if(player2.isWinner()){
             System.out.println("You lost the game!\nCreated by Shreya's Sahi. Thanks for playing!");
             return true;
         } else if(isFullField){
